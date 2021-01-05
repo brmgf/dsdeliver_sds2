@@ -20,7 +20,7 @@ public class ProductController {
 	
 	@GetMapping
 	public ResponseEntity<List<ProductDto>> findAll() {
-		List<ProductDto> list = service.findAll();
+		List<ProductDto> list = service.findAllByOrderByNameAsc();
 		return ResponseEntity.ok().body(list);
 	}
 }
