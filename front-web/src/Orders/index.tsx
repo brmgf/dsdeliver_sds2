@@ -4,6 +4,7 @@ import ProductsList from './ProductList'
 import {useEffect, useState} from 'react'
 import { Product } from './type';
 import { fetchProducts } from '../api';
+import OrderLocation from './OrderLocation'
 
 function Orders() {
     const [products, setProducts] = useState<Product[]>([]);
@@ -16,6 +17,7 @@ function Orders() {
         <div className="order-container">
             <StepsHeader />
             <ProductsList products={products} />
+            <OrderLocation />
         </div>
     )
 }
