@@ -1,16 +1,26 @@
-import { ReactComponent as Pizza} from './pizza.svg'
+import { createModifiersFromModifierFlags } from 'typescript';
+import { Product } from './type';
 
-function ProductCard() {
+type Props = {
+    product: Product;
+}
+
+function formatePrice(price: number) {
+    const formatter = new Intl.NumberFormat('pt-BR',{style:'currency', currency: 'BRL'});
+    return formatter.format(price);
+}
+
+function ProductCard({product}: Props) {
     return (
         <div className="orders-card-container">
            <h3 className="order-card-title">
-               Pizza Calabresa
+               {product.name}
            </h3>
-            <Pizza className="order-card-image"/>
-            <h3 className="order-card-price"> R$35,90</h3>
+            <img src={product.imageUri} alt={product.name} className="order-card-image"/>
+            <h3 className="order-card-price">{formatePrice(product.price)}</h3>
             <div className="order-card-description">
                 <h3>Descrição:</h3>
-                <p>Uma deliciosa combinação de Linguiça Calabresa, rodelas de cebolas frescas, azeitonas pretas, mussarela, polpa de tomate, orégano e massa especial.</p>
+                <p>{product.description}</p>
             </div>
         </div>
     )
