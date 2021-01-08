@@ -1,9 +1,10 @@
 import './style.css'
+import {Link} from 'react-router-dom'
 
 function Navbar() {
     return (
         <nav className="main-navbar">
-            <a href="index.tsx">DS Deliver</a>
+            <Link to="/">DS Deliver</Link>
         </nav>
     )
 }
