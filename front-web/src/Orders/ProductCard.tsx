@@ -1,18 +1,16 @@
 import { createModifiersFromModifierFlags } from 'typescript';
+import { formatePrice } from './helpers';
 import { Product } from './type';
 
 type Props = {
     product: Product;
+    onSelectProduct: (product: Product) => void;
+    isSelected: boolean;
 }
 
-function formatePrice(price: number) {
-    const formatter = new Intl.NumberFormat('pt-BR',{style:'currency', currency: 'BRL'});
-    return formatter.format(price);
-}
-
-function ProductCard({product}: Props) {
+function ProductCard({product, onSelectProduct, isSelected}: Props) {
     return (
-        <div className="orders-card-container">
+        <div className={`order-card-container ${isSelected ? 'selected' : '' }`} onClick={() => onSelectProduct(product)}>
            <h3 className="order-card-title">
                {product.name}
            </h3>
