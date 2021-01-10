@@ -5,8 +5,8 @@ import {useState} from 'react'
 import { OrderLocationData } from './type'
 
 const initialPosition = {
-    lat: 51.505,
-    lng: -0.09
+    lat: -19.1592,
+    lng: -45.4477
 }
     
 type Place = {
