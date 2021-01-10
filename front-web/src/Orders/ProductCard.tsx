@@ -1,4 +1,3 @@
-import { createModifiersFromModifierFlags } from 'typescript';
 import { formatePrice } from './helpers';
 import { Product } from './type';
 

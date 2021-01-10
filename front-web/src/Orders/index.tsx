@@ -1,4 +1,3 @@
-import { ToastContainer } from 'react-toastify'
 import {toast} from 'react-toastify'
 import StepsHeader from './StepsHeader'
 import ProductsList from './ProductList'
