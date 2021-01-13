@@ -22,6 +22,8 @@ a {
 }
 
 .main-navbar {
+    position: fixed;
+    width: 100%;
     height: 70px;
     background: var(--primary-color);
     display: flex;
@@ -35,4 +37,10 @@ a {
     line-height: 33px;
     letter-spacing: -0.015em;
     color: #FFFFFF;
+}
+
+@media only screen and (max-width: 768px) {
+    .main-navbar {
+        width: 100%;
+    }
 }

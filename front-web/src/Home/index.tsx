@@ -13,7 +13,7 @@ function Home() {
                     <h3 className="home-subtitle">Escolha seu pedido que em poucos minutos <br />levaremos na sua porta</h3>
                     <Link to="/orders" className="home-btn-order" href="#">FAZER PEDIDO</Link>
                 </div>
-            <div className="home-img">
+            <div className="home-image">
                 <MainImage />
             </div>
           </div>
