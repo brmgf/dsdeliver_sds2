@@ -1,6 +1,6 @@
 .home-container {
   padding: 100px 50px;
-  height: calc(100vh - 254px);
+  height: calc(100vh - 274px);
 }
   
 .home-container h1 {
@@ -54,10 +54,10 @@
   width: 100%;
 }
   
-@media only screen and (min-width: 499px) and (max-width: 768px) {
+@media only screen and (min-width: 649px) and (max-width: 768px) {
   .home-container {
     height: auto;
-    padding: 30px;
+    
   }
  
   .home-content {
@@ -81,8 +81,7 @@
   
   .home-image {
     text-align: center;
-    margin: 10px 0;
-    padding: 0;
+    margin-bottom: 20px;
   }
   
   .home-image svg {
@@ -90,7 +89,7 @@
   }
 }
 
-@media only screen and (max-width: 498px){
+@media only screen and (max-width: 648px){
 
   .home-content {
     padding: 5px;
@@ -116,6 +115,7 @@
     height: 60px;
     width: 200px;
     font-size: 20px;
+    align-items: center;
     letter-spacing: -0.015em;
     color: #FFF;
   }
@@ -123,4 +123,5 @@
   .home-image {
     display: none;
   }
+
 }
